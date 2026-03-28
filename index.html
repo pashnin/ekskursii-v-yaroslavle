@@ -3,171 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Лучшие экскурсии в Ярославле</title>
-    <meta name="title" content="Лучшие экскурсии в Ярославле">
-    <meta name="description" content="Лучшие экскурсии в Ярославле на 2026 год">
-    <meta name="author" content="Александр Иванов">
-    <meta name="keywords" content="Лучшие экскурсии в Ярославле Лучшие экскурсии в Ярославле на 2026 год">
-    
-    <!-- Webmaster Verification -->
+
+    <title>{{ARTICLE_TITLE}}</title>
+    <meta name="title" content="{{ARTICLE_TITLE}}">
+    <meta name="description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta name="author" content="{{AUTHOR_NAME}}">
+    <meta name="keywords" content="{{ARTICLE_KEYWORDS}}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="google-site-verification" content="k1naFcMKtZ0AU2hjBnyOV0ByIwQiO-JKxBl57AOcdxU">
-    <meta name="yandex-verification" content="b50f82c5599ddf32">
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="stylesheet" href="/styles.css"/>
+    <meta name="yandex-verification" content="{{YANDEX_VERIFICATION_CODE}}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="canonical" href="{{ARTICLE_URL}}">
+
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://ekskursii-v-yaroslavle.vercel.app">
-    <meta property="og:title" content="Лучшие экскурсии в Ярославле">
-    <meta property="og:description" content="Лучшие экскурсии в Ярославле на 2026 год">
-    <meta property="og:image" content="https://ekskursii-v-yaroslavle.vercel.app/icon.png">
-    <meta property="og:site_name" content="Лучшие экскурсии в Ярославле">
+    <meta property="og:url" content="{{ARTICLE_URL}}">
+    <meta property="og:title" content="{{ARTICLE_TITLE}}">
+    <meta property="og:description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta property="og:image" content="{{OG_IMAGE_URL}}">
+    <meta property="og:site_name" content="{{SITE_NAME}}">
     <meta property="og:locale" content="ru_RU">
-    <meta property="article:published_time" content="2026-01-10T21:15:41+00:00">
-    <meta property="article:author" content="Александр Иванов">
+    <meta property="article:published_time" content="{{PUBLISH_DATE_ISO}}">
+    <meta property="article:modified_time" content="{{PUBLISH_DATE_ISO}}">
+    <meta property="article:author" content="{{AUTHOR_NAME}}">
     <meta property="article:section" content="Статьи">
-    
-    <!-- Twitter -->
+    <meta property="article:tag" content="{{ARTICLE_KEYWORDS}}">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://ekskursii-v-yaroslavle.vercel.app">
-    <meta name="twitter:title" content="Лучшие экскурсии в Ярославле">
-    <meta name="twitter:description" content="Лучшие экскурсии в Ярославле на 2026 год">
-    <meta name="twitter:image" content="https://ekskursii-v-yaroslavle.vercel.app/icon.png">
-    <meta name="twitter:creator" content="Александр Иванов">
-    
-    <!-- Favicon -->
+    <meta name="twitter:url" content="{{ARTICLE_URL}}">
+    <meta name="twitter:title" content="{{ARTICLE_TITLE}}">
+    <meta name="twitter:description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+    <meta name="twitter:creator" content="{{AUTHOR_NAME}}">
+
     <link rel="icon" type="image/png" href="/icon.png">
     <link rel="apple-touch-icon" href="/icon.png">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Schema.org JSON-LD -->
+
+
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Лучшие экскурсии в Ярославле",
-        "description": "Лучшие экскурсии в Ярославле на 2026 год",
-        "image": "https://ekskursii-v-yaroslavle.vercel.app/icon.png",
-        "datePublished": "2026-01-10T21:15:41+00:00",
-        "dateModified": "2026-01-10T21:15:41+00:00",
-        "author": {
-            "@type": "Person",
-            "name": "Александр Иванов",
-            "description": "Эксперт в области культурного туризма и исторической архитектуры, специализирующийся на городах Золотого кольца России. Обладает многолетним опытом проведения экскурсий и глубокими знаниями о местной культуре и традициях. Автор статьи о Ярославле, в которой представлены уникальные маршруты и активные формы отдыха, включая дегустацию ярославского мёда, что подчеркивает его способность сочетать познавательную и гастрономическую составляющие в экскурсионных программах.",
-            "image": "https://ui-avatars.com/api/?name=Александр+Иванов&amp;size=120&amp;background=4f46e5&amp;color=fff&amp;bold=true"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Лучшие экскурсии в Ярославле",
-            "url": "https://ekskursii-v-yaroslavle.vercel.app",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://ekskursii-v-yaroslavle.vercel.app/icon.png"
+        "@graph": [
+            {
+                "@type": "Article",
+                "headline": {{ARTICLE_TITLE_JSON}},
+                "description": {{ARTICLE_DESCRIPTION_JSON}},
+                "image": ["{{OG_IMAGE_URL}}"],
+                "datePublished": "{{PUBLISH_DATE_ISO}}",
+                "dateModified": "{{PUBLISH_DATE_ISO}}",
+                "author": {
+                    "@type": "Person",
+                    "name": {{AUTHOR_NAME_JSON}},
+                    "description": {{AUTHOR_DESCRIPTION_JSON}},
+                    "image": "{{AUTHOR_AVATAR}}"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": {{SITE_NAME_JSON}},
+                    "url": "{{SITE_URL}}",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{SITE_URL}}/icon.png"
+                    }
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "{{ARTICLE_URL}}"
+                },
+                "articleSection": "Статьи",
+                "wordCount": {{WORD_COUNT}},
+                "timeRequired": "PT{{READING_TIME}}M",
+                "inLanguage": "ru-RU"
+            },
+            {
+                "@type": "Person",
+                "@id": "{{ARTICLE_URL}}#author",
+                "name": {{AUTHOR_NAME_JSON}},
+                "description": {{AUTHOR_DESCRIPTION_JSON}},
+                "image": "{{AUTHOR_AVATAR}}",
+                "jobTitle": "Эксперт"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": {{SITE_NAME_JSON}},
+                        "item": "{{SITE_URL}}"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Статьи",
+                        "item": "{{SITE_URL}}/articles/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": {{ARTICLE_TITLE_JSON}},
+                        "item": "{{ARTICLE_URL}}"
+                    }
+                ]
+            },
+            {
+                "@type": "WebPage",
+                "@id": "{{ARTICLE_URL}}#webpage",
+                "url": "{{ARTICLE_URL}}",
+                "name": {{ARTICLE_TITLE_JSON}},
+                "description": {{ARTICLE_DESCRIPTION_JSON}},
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "name": {{SITE_NAME_JSON}},
+                    "url": "{{SITE_URL}}"
+                },
+                "about": {
+                    "@type": "Thing",
+                    "name": {{ARTICLE_TITLE_JSON}}
+                },
+                "inLanguage": "ru-RU"
             }
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://ekskursii-v-yaroslavle.vercel.app"
-        },
-        "articleSection": "Статьи",
-        "wordCount": 945,
-        "timeRequired": "PT5M"
+        ]
     }
     </script>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="article-header">
-            <div class="header-content">
-                <h1 class="article-title" itemprop="headline">Лучшие экскурсии в Ярославле</h1>
-                <div class="article-meta">
-                    <time datetime="2026-01-10T21:15:41+00:00" itemprop="datePublished">10.01.2026</time>
-                    <meta itemprop="dateModified" content="2026-01-10T21:15:41+00:00">
-                    <span class="reading-time" itemprop="timeRequired" content="PT5M">Время чтения: 5 мин</span>
-                </div>
-            </div>
-        </header>
-
-        <!-- Author Section -->
-        <section class="author-section" itemscope itemtype="https://schema.org/Person" itemprop="author">
-            <div class="author-card">
-                <div class="author-avatar">
-                    <img src="https://ui-avatars.com/api/?name=Александр+Иванов&amp;size=120&amp;background=4f46e5&amp;color=fff&amp;bold=true" alt="Александр Иванов" itemprop="image" onerror="this.src='https://ui-avatars.com/api/?name=Александр+Иванов&size=120&background=4f46e5&color=fff&bold=true'">
-                </div>
-                <div class="author-info">
-                    <div class="author-name" itemprop="name">Александр Иванов</div>
-                    <p class="author-description" itemprop="description">Эксперт в области культурного туризма и исторической архитектуры, специализирующийся на городах Золотого кольца России. Обладает многолетним опытом проведения экскурсий и глубокими знаниями о местной культуре и традициях. Автор статьи о Ярославле, в которой представлены уникальные маршруты и активные формы отдыха, включая дегустацию ярославского мёда, что подчеркивает его способность сочетать познавательную и гастрономическую составляющие в экскурсионных программах.</p>
-                    <div class="author-badges">
-                        <span class="badge expert" itemprop="jobTitle">Эксперт</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Article Content -->
-        <article class="article-content" itemscope itemtype="https://schema.org/Article">
-            <meta itemprop="headline" content="Лучшие экскурсии в Ярославле">
-            <meta itemprop="description" content="Лучшие экскурсии в Ярославле на 2026 год">
-            <meta itemprop="datePublished" content="2026-01-10T21:15:41+00:00">
-            <meta itemprop="dateModified" content="2026-01-10T21:15:41+00:00">
-            <meta itemprop="timeRequired" content="PT5M">
-            <meta itemprop="wordCount" content="945">
-            <div class="content-wrapper" itemprop="articleBody">
-                <p><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Узнать больше</a></p><p>Экскурсии в Ярославле — это возможность погрузиться в историю и культуру одного из самых известных городов Золотого кольца России. Здесь сочетаются величественные памятники архитектуры, насыщенная культурная программа и развлечения для гостей любого возраста. В подборке представлены как пешие обзорные маршруты, так и тематические экскурсии с необычными активностями.</p><h2>1) Прогулка по старому Ярославлю с дегустацией местного меда</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Экскурсия начинается с прогулки по улочкам старого города, где вы узнаете о быте горожан XIX века и истории зданий, которые до сих пор украшают Ярославль. Во время пути вас ждёт дегустация натурального ярославского мёда разных сортов. Гид расскажет интересные факты о пчеловодстве и традициях использования мёда в русской кухне.</p><p><b>Плюсы</b>:</p><p>Увлекательная история города<br> Аутентичный вкус региона<br> Возможность попробовать уникальные сорта мёда</p><p><b>Отзывы</b>:<br> Гости отмечают необычность маршрута, приятную атмосферу и интересные рассказы гида. Многие остались довольны дегустацией и новыми знаниями о городе.</p><p><b>Цена</b>: 1900 руб. за человека</p><h2>2) Экскурсия по музею Космос» с мастер-классом по приготовлению настоящего космического обеда</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Вы отправитесь в путешествие в мир космонавтики, посетив музей Космос» в Ярославле. Вас ждёт рассказ о советской космической программе, образцы космических скафандров и техники. После обзорной части состоится мастер-класс по приготовлению блюд, аналогичных тем, что ели космонавты на борту.</p><p><b>Плюсы</b>:</p><p>Интерактивная часть с мастер-классом<br> Рассказы о реальных полётах в космос<br> Подходит для всей семьи</p><p><b>Отзывы</b>:<br> Участники в восторге от сочетания познавательной и практической части программы. Дети особенно любят узнавать о жизни космонавтов и пробовать космическую» еду.</p><p><b>Цена</b>: 1800 руб. за человека</p><h2>3) Квест-экскурсия по Ярославлю: найти пропавшую картину</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Вас ждёт увлекательная квест-прогулка по центральным улицам Ярославля, во время которой нужно раскрыть тайну исчезновения ценной картины. Вы будете решать загадки, находить подсказки и взаимодействовать с персонажами. Экскурсия подойдёт тем, кто любит активный отдых и головоломки.</p><p><b>Плюсы</b>:</p><p>Нестандартный формат экскурсии<br> Командная игра и азарт<br> Интересные исторические локации</p><p><b>Отзывы</b>:<br> Туристы хвалят креативный подход, увлекательный сюжет и возможность почувствовать себя детективами. Особенно нравится молодым компаниям и друзьям.</p><p><b>Цена</b>: 4200 руб. за группу</p><h2>4) Пешеходная экскурсия по Спасскому монастырю и его окрестностям</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Программа включает знакомство с одной из древнейших достопримечательностей Ярославля — Спасским монастырём. Гид расскажет о его истории, архитектуре и роли в духовной жизни города. Вы также пройдётесь по прилегающим территориям и узнаете малоизвестные факты о монашеской жизни.</p><p><b>Плюсы</b>:</p><p>Историческая глубина<br> Тихая атмосфера исторического района<br> Общение с профессиональным гидом</p><p><b>Отзывы</b>:<br> Посетители отмечают высокий уровень подачи информации и спокойную, почти мистическую атмосферу экскурсии. Многие рекомендуют как обязательное посещение для всех гостей города.</p><p><b>Цена</b>: 1600 руб. за человека</p><h2>5) Ночная прогулка по Ярославлю с рассказами о страшных легендах</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>На этой экскурсии вы услышите самые жуткие предания и городские легенды Ярославля. Прогулка проходит вечером по освещённым улицам, что создаёт особую атмосферу. Гид расскажет о привидениях, проклятиях и загадочных происшествиях, случавшихся в старинных домах.</p><p><b>Плюсы</b>:</p><p>Необычная атмосфера ночного города<br> Интересные страшные истории<br> Отлично подходит для компании друзей</p><p><b>Отзывы</b>:<br> Многие туристы называют эту экскурсию самой запоминающейся. Особенно популярна среди молодёжи и любителей паранормального.</p><p><b>Цена</b>: 2100 руб. за человека</p><h2>6) Ярославль глазами фотографа: авторская фотопрогулка</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Фотоэкскурсия проводится с профессиональным фотографом, который покажет вам лучшие уголки Ярославля и поможет сделать красивые снимки. Гид-фотограф расскажет о композиции, ракурсах и световых условиях, а также поделится секретами создания эффектных кадров.</p><p><b>Плюсы</b>:</p><p>Профессиональные фото на фоне достопримечательностей<br> Советы по фотографии от специалиста<br> Индивидуальный подход</p><p><b>Отзывы</b>:<br> Участники в восторге от полученных снимков и качества сопровождения. Отмечают, что такой формат позволяет не только увидеть город, но и увезти с собой отличные фотографии.</p><p><b>Цена</b>: 3500 руб. за человека</p><h2>7) Мастер-класс по гончарному делу в историческом районе</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Экскурсия включает посещение гончарной мастерской в одном из старинных районов Ярославля. Вы узнаете о традициях русского гончарства и сами сможете изготовить свою керамическую поделку. Гид расскажет о том, как создавалась посуда в давние времена и какие символы использовали мастера.</p><p><b>Плюсы</b>:</p><p>Интерактивная часть с мастер-классом<br> Возможность забрать свой сувенир домой<br> Знакомство с народными ремёслами</p><p><b>Отзывы</b>:<br> Посетители высоко оценивают возможность попробовать себя в роли ремесленника. Многие остаются в восторге от полученной вещицы и доброжелательной атмосферы.</p><p><b>Цена</b>: 2200 руб. за человека</p><h2>8) Автомобильная обзорная экскурсия по Ярославлю с посещением главных достопримечательностей</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Экскурсия на автомобиле или микроавтобусе позволит за короткое время увидеть основные достопримечательности города. Вы посетите такие места, как Церковь Ильи Пророка, Спасо-Преображенский собор, Стрелка и другие ключевые точки. Гид расскажет о значении каждого объекта и истории их создания.</p><p><b>Плюсы</b>:</p><p>Удобный формат для тех, кто ограничен во времени<br> Охват большого количества локаций<br> Возможность выбрать продолжительность тура</p><p><b>Отзывы</b>:<br> Туристы положительно отзываются о структуре программы и удобстве перемещения. Особенно подходит для первых дней пребывания в городе.</p><p><b>Цена</b>: 4500 руб. за группу</p><h2>9) Экскурсия по музею холодильников с элементами игры</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>Необычный маршрут по частному музею, где собраны холодильники разных эпох — от советских до современных. Экскурсия включает интерактивные задания и весёлые мини-игры, связанные с бытовой техникой. Это отличный вариант для неформального времяпрепровождения.</p><p><b>Плюсы</b>:</p><p>Юмористический и необычный формат<br> Интересные экспонаты и анекдоты из истории<br> Подходит для молодёжных компаний</p><p><b>Отзывы</b>:<br> Посетители называют это место одним из самых неожиданных и смешных. Многие говорят, что ушли с экскурсии с хорошим настроением и новыми воспоминаниями.</p><p><b>Цена</b>: 1500 руб. за человека</p><h2>10) Виртуальная экскурсия в прошлое: Ярославль XVII века</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a><p>С помощью VR-технологий вы окажетесь в Ярославле того времени — увидите улицы, дома, одежду и быт людей. Экскурсия дополнена живым рассказом гида, который проведёт параллели между прошлым и настоящим. Это уникальный способ погрузиться в историю без временных ограничений.</p><p><b>Плюсы</b>:</p><p>Современный формат с технологией виртуальной реальности<br> Интересный синтез технологий и истории<br> Подходит всем возрастам</p><p><b>Отзывы</b>:<br> Пользователи отмечают инновационность и наглядность подачи материала. Особенно понравилась детям и молодёжи, которые смогли представить, как выглядел город столетия назад.</p><p><b>Цена</b>: 2300 руб. за человека</p><h2>Вопросы для закрытия темы Экскурсии в Ярославле» :<br> Какие экскурсии в Ярославле наиболее популярны среди туристов?<br> Какие тематические экскурсии доступны в Ярославле в 2025 году?<br> Какие экскурсии в Ярославле подойдут для семей с детьми?<br> Какие экскурсии в Ярославле включают мастер-классы или интерактивные активности?<br> Какие необычные экскурсии можно выбрать в Ярославле для неформального отдыха?<br> Какие <b>отзывы</b> оставляют туристы об экскурсиях в Ярославле?<br> Какие экскурсии в Ярославле подходят для любителей истории и культуры?<br> Какова средняя стоимость экскурсии в Ярославле в 2025 году?<br> Какие экскурсии в Ярославле включают работу с фотографом или VR-технологии?<br> Как выбрать экскурсию в Ярославле для большой группы или компании друзей<br>Реклама. Flight Marketplace Admin FZE. ИНН 9909618947</h2><a href="https://experience.tripster.ru/experience/Yaroslavl/25357-razvlecheniya/?exp_partner=vk2334064&utm_source=vk2334064&utm_campaign=affiliates&utm_medium=link&erid=Y1jgkD6uB783K4Grye8ZQ1QR8JiF&utm-term=Yaroslavl-25357">Подробнее</a>
-            </div>
-        </article>
-
-        <!-- Table Section -->
-        <section class="table-section">
-            <h2 class="section-title">Таблица сравнения</h2>
-            <div class="table-container">
-                <table border="1" cellspacing="0" cellpadding="5">
-    <thead>
-        <tr>
-            <th>Название экскурсии</th>
-            <th>Плюсы</th>
-            <th>Отзывы</th>
-            <th>Цена</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Прогулка по старому Ярославлю с дегустацией местного меда</td>
-            <td>Увлекательная история города, Аутентичный вкус региона, Возможность попробовать уникальные сорта мёда</td>
-            <td>Гости отмечают необычность маршрута, приятную атмосферу и интересные рассказы гида.</td>
-            <td>1900 руб. за человека</td>
-        </tr>
-        <tr>
-            <td>Экскурсия по музею Космос» с мастер-классом по приготовлению настоящего космического обеда</td>
-            <td>Интерактивная часть с мастер-классом, Рассказы о реальных полётах в космос, Подходит для всей семьи</td>
-            <td>Участники в восторге от сочетания познавательной и практической части программы.</td>
-            <td>1800 руб. за человека</td>
-        </tr>
-        <tr>
-            <td>Квест-экскурсия по Ярославлю: найти пропавшую картину</td>
-            <td>Интересный сюжет, Активное участие, Познавательный аспект</td>
-            <td>Увлекательная и захватывающая прогулка, радость от нахождения решений.</td>
-            <td>1500 руб. за человека</td>
-        </tr>
-    </tbody>
-</table>
-            </div>
-        </section>
-
-        
-
-        <!-- Footer -->
-        <footer class="article-footer">
-            <div class="footer-content">
-                <p>&copy; 2026 Александр Иванов. Все права защищены.</p>
+    <div class="s-9ec1-page-shell">
+        <div class="s-9ec1-site-topbar" aria-label="Навигация по статье">
+            <div class="s-9ec1-site-topbar__brand">
+                <span class="s-9ec1-site-topbar__dot" aria-hidden="true"></span>
                 
             </div>
-        </footer>
+            
+        </div>
+
+        <main class="s-9ec1-article-layout">
+            <article class="s-9ec1-article-card" itemscope itemtype="https://schema.org/Article">
+                <meta itemprop="headline" content="{{ARTICLE_TITLE}}">
+                <meta itemprop="description" content="{{ARTICLE_DESCRIPTION}}">
+                <meta itemprop="datePublished" content="{{PUBLISH_DATE_ISO}}">
+                <meta itemprop="dateModified" content="{{PUBLISH_DATE_ISO}}">
+                <meta itemprop="timeRequired" content="PT{{READING_TIME}}M">
+                <meta itemprop="wordCount" content="{{WORD_COUNT}}">
+                <meta itemprop="mainEntityOfPage" content="{{ARTICLE_URL}}">
+
+                <header class="s-9ec1-hero">
+                    <div class="s-9ec1-eyebrow-row">
+                        
+                        
+                    </div>
+
+                    <h1 itemprop="headline">{{ARTICLE_TITLE}}</h1>
+                    
+
+                    <div class="s-9ec1-meta-grid" aria-label="Ключевая информация о статье">
+
+                        <div class="s-9ec1-meta-card">
+                            <div class="s-9ec1-meta-label">Дата публикации</div>
+                            <div class="s-9ec1-meta-value"><time datetime="{{PUBLISH_DATE_ISO}}">{{PUBLISH_DATE_FORMATTED}}</time></div>
+                        </div>
+                        <div class="s-9ec1-meta-card">
+                            <div class="s-9ec1-meta-label">Время чтения</div>
+                            <div class="s-9ec1-meta-value">{{READING_TIME}} мин</div>
+                        </div>
+                        <div class="s-9ec1-meta-card">
+                            <div class="s-9ec1-meta-label">Объём текста</div>
+                            <div class="s-9ec1-meta-value">{{WORD_COUNT}} слов</div>
+                        </div>
+                    </div>
+
+                    <section class="s-9ec1-author-box" itemscope itemtype="https://schema.org/Person" itemprop="author">
+                        <div class="s-9ec1-author-avatar">
+                            <img
+                                src="{{AUTHOR_AVATAR}}"
+                                alt="{{AUTHOR_NAME}}"
+                                itemprop="image"
+                                onerror="this.src='https://ui-avatars.com/api/?name={{AUTHOR_NAME_ENCODED}}&size=160&background=f1f5f9&color=111827&bold=true'"
+                            >
+                        </div>
+                        <div class="s-9ec1-author-info">
+                            <div class="s-9ec1-author-name-row">
+                                <div class="s-9ec1-author-name" itemprop="name">{{AUTHOR_NAME}}</div>
+                                <div class="s-9ec1-author-badge" itemprop="jobTitle">Эксперт</div>
+                            </div>
+                            <p class="s-9ec1-author-description" itemprop="description">{{AUTHOR_DESCRIPTION}}</p>
+                        </div>
+                    </section>
+                </header>
+
+                <div class="s-9ec1-article-body">
+                    <div class="s-9ec1-article-content">
+
+                        <div class="s-9ec1-notion-prose" itemprop="articleBody">
+                            {{ARTICLE_HTML_CONTENT}}
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <section class="s-9ec1-table-card s-9ec1-table-section" aria-labelledby="comparison-title">
+                <div class="s-9ec1-section-head">
+                    <h2 id="s-9ec1-comparison-title">Таблица сравнения</h2>
+
+                </div>
+
+                <div class="s-9ec1-table-wrap">
+                    {{TABLE_CONTENT}}
+                </div>
+            </section>
+
+            <footer class="s-9ec1-footer-card s-9ec1-article-footer">
+                <div class="s-9ec1-footer-inner">
+                    <p>&copy; {{CURRENT_YEAR}}</p>
+                   
+                </div>
+            </footer>
+        </main>
     </div>
+
+
 </body>
 </html>
-
-
